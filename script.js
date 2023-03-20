@@ -14,7 +14,7 @@ http.onload = function() {
             <div class="listing">
                 
                
-                <div class="prop" style="background:url(/images/${item.image});
+                <div class="prop" style="background:url(./images/${item.image});
                 background-size: cover;
                 border-radius: 20px;
                 background-repeat: no-repeat;">
@@ -46,7 +46,7 @@ http.onload = function() {
             
             `
         }
-        console.log(output);
+       
         document.getElementById("listings").innerHTML = output;
     }
 }
