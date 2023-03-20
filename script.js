@@ -14,12 +14,11 @@ http.onload = function() {
             <div class="listing">
                 
                
-                <div class="prop-image" style="width: 800px;
-                        height: 700px;
-                        background: url(../images/${item.image});
-                        background-size: cover;
-                        border-radius: 20px;
-                        background-repeat: no-repeat;"> </div>
+                <div class="prop" style="background:url(../images/${item.image});
+                background-size: cover;
+                border-radius: 20px;
+                background-repeat: no-repeat;">
+                 </div>
                 <div class="details-container">
                         <p class="details name">${item.name}</p>
                         <p class="details classification">Asset Classification: ${item.classification}</p>
