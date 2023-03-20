@@ -13,39 +13,44 @@ http.onload = function() {
             output += `
 
             <div class="listing-container">
-            <div class="listing">
+                <div class="listing">
+                    
                 
-               
-            <div class="prop" style="background:url(./images/${item.image});
-            background-size: cover;
-            border-radius: 20px;
-            background-repeat: no-repeat;">
-             </div>
-            <div class="details-container">
-                    <p class="details name">${item.name}</p>
-                    <p class="details classification">Asset Classification: ${item.classification}</p>
-                    <p class="details">${item.address}</p>
-                    
-
-                    <p class="details">Valuation per sqm: Phpxxx</p>
-                    <p class="details">Zonal Value per sqm: Phpxxx</p>
-                    <p class="details">Total Asset Value: Phpxxx</p>
-
-                    <p class="details reco">Recommendation: Hold</p>
-                    <p class="details reco">Location Map:</p>
-
-
-                    <div class="links-container">
-                        <a href="${item.maplink}" class="details">Google maps link</a>
-                        <a href="${item.streetview}" class="details">Google Streetview</a>
-                        
+                    <div class="prop" style="background:url(./images/${item.image});
+                        background-size: cover;
+                        border-radius: 20px;
+                        background-repeat: no-repeat;">
                     </div>
-                    <div class="iframe"> ${item.embedlink} </div>
+
+                    <div class="details-container">
+
+                            <p class="details name">${item.name}</p>
+                            <p class="details classification">Asset Classification: ${item.classification}</p>
+                            <p class="details">${item.address}</p>
+                            
+
+                            <p class="details">Valuation per sqm: Phpxxx</p>
+                            <p class="details">Zonal Value per sqm: Phpxxx</p>
+                            <p class="details">Total Asset Value: Phpxxx</p>
+
+                            <p class="details reco">Recommendation: Hold</p>
+                            <p class="details reco">Location Map:</p>
+
+
+                            <div class="links-container">
+                                <a href="${item.maplink}" class="details">Google maps link</a>
+                                <a href="${item.streetview}" class="details">Google Streetview</a>
+                                
+                            </div>
+
+                            <div class="iframe">
+                                ${item.embedlink}
+                            </div>
+                            
                     
-            
-                 </div>
-            
-            </div>
+                    </div>
+                
+                </div>
         
             </div>
             
