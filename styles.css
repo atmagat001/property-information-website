@@ -28,6 +28,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    position: relative
    
 
 
@@ -45,13 +46,13 @@ main {
     align-items: flex-start;
     padding: 10px;
     background-color: white;
-    font-size: 20px;
+    font-size: 18px;
 
     
 }
 
 .details {
-    margin-top: 15px;
+    margin-top: 10px;
     
 
 }
@@ -83,7 +84,7 @@ header {
 
 .name {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .details-container {
@@ -96,8 +97,10 @@ header {
 }
 
 p {
+    padding: 5px;
     border-bottom: 1px dashed lightgray;
     width: 100%;
+    align-items: center;
 }
 
 .links-container {
@@ -126,7 +129,7 @@ iframe {
 
 
 .listing-container{
-    display: flex;
+    visibility: hidden;
     height: 800px;
     width: 100%;
     border-radius: 20px;
@@ -134,5 +137,53 @@ iframe {
     align-items: center;
     background-color: white;
     margin: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0ms opacity ease-in-out;
+    transition-delay: 200ms;
+    opacity: 0%;
 
+}
+
+
+#active-slide {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    opacity: 100%;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 0ms;
+    
+    
+    
+}
+
+
+button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+
+}
+
+
+.previous {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+li {
+    list-style: none;
 }

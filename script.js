@@ -8,18 +8,19 @@ http.onload = function() {
     if(this.readyState== 4 && this.status == 200) {
         let listings = JSON.parse(this.responseText);
         let output = "";
+        let links ="";
        
         for (let item of listings) {
             output += `
 
-            <div class="listing-container">
-                <div class="listing">
-                    
-                
+            <li class="listing-container">
+                <div class="listing">                  
+                 
                     <div class="prop" style="background:url(./images/${item.image});
                         background-size: cover;
                         border-radius: 20px;
-                        background-repeat: no-repeat;">
+                        background-repeat: no-repeat;
+                        background-color: lightblue;">
                     </div>
 
                     <div class="details-container">
@@ -38,25 +39,56 @@ http.onload = function() {
 
 
                             <div class="links-container">
-                                <a href="${item.maplink}" class="details">Google maps link</a>
+                                <a href="${item.maplink} target="_blank" rel="noopener noreferrer" class="details">Google maps link</a>
                                 <a href="${item.streetview}" class="details">Google Streetview</a>
                                 
                             </div>
-
-                            <div class="iframe">
-                                ${item.embedlink}
-                            </div>
-                            
-                    
+                           
                     </div>
                 
                 </div>
+                <p>Property Number ${item.index} of 34</>
         
-            </div>
+            </li>
             
             `
         }
        
         document.getElementById("listings").innerHTML = output;
+        document.querySelectorAll("li")[0].setAttribute("id","active-slide")
+        
+       
+
     }
 }
+
+/* movement of slides */
+    let offset = 1;
+    let nextbutton = document.getElementsByClassName("next")[0];
+    let previousbutton = document.getElementsByClassName("previous")[0];
+
+    nextbutton.addEventListener("click", slideNext)
+    previousbutton.addEventListener("click", slidePrevious)
+    function slideNext() {
+        offset = 1
+        slideMovement()
+    }
+
+    function slidePrevious() {
+        offset = -1
+        slideMovement()
+    }
+
+    function slideMovement() {
+        let slides = document.querySelectorAll("li");
+        let activeSlide = document.getElementById("active-slide");
+        let newIndex = [...slides].indexOf(activeSlide) + offset;
+
+        if (newIndex >= slides.length) newIndex= 0;
+        if (newIndex < 0) newIndex = slides.length - 1;
+
+        activeSlide.removeAttribute("id")
+        slides[newIndex].setAttribute("id","active-slide")
+        offset = 0;
+        
+    }
