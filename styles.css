@@ -254,6 +254,7 @@ li {
     .listing-container {
        position: absolute;
        top: 50px;
+       margin: auto;
     }
     .listing {
         margin: 0;
