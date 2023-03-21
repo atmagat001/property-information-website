@@ -252,7 +252,7 @@ li {
     }
 
     .listing-container {
-       position: relative;
+       position: absolute;
        top: 50px;
     }
     .listing {
