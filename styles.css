@@ -187,3 +187,65 @@ button {
 li {
     list-style: none;
 }
+
+@media only screen and (max-width: 800px) {
+    header {
+        width: 100%;
+    }
+    
+    .header-container {
+        width: 100vw;
+        margin: auto;
+        font-size: 1rem;
+        justify-content: space-between;
+    }
+
+    .listing-container {
+        margin: 0;
+        padding: 0;
+    }
+    .listing {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .prop-img {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .details-container {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    iframe {
+        width: auto;
+        height: auto;
+    }
+
+    button {
+        position: absolute;
+        z-index: 2;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        top: 100px;
+        transform: translateY(-50%);
+        color: rgba(255, 255, 255, .5);
+        cursor: pointer;
+        border-radius: .25rem;
+        padding: 0 .5rem;
+        background-color: rgba(0, 0, 0, .1);
+    
+    }
+  }
