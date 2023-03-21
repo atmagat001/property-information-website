@@ -59,7 +59,7 @@ main {
 
 header {
     height: 50px;
-    width: 100vw;
+    width: 100%;
     background-color: black;
     color: white;
     position: fixed;
@@ -74,12 +74,18 @@ header {
 }
 
 .header-container {
-    
+    max-width: 1500px;
+    width: 100vw;
     height: 50px;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+}
+
+.logo-container {
+    font-size: 15px;
 }
 
 .name {
@@ -195,18 +201,25 @@ li {
         height: 100vh;
     }
     header {
-        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        height: fit-content;
     }
     
     .header-container {
+        font-size: 1rem;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
         width: 100vw;
         margin: auto;
         font-size: 1rem;
-        justify-content: space-between;
+        justify-content: center
     }
 
     .listing-container {
-       
+       position: relative;
+       top: 50px;
     }
     .listing {
         margin: 0;
@@ -264,7 +277,8 @@ li {
         z-index: 2;
         background: none;
         border: none;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        
         top: 100px;
         transform: translateY(-50%);
         color: rgba(255, 255, 255, .5);
@@ -277,10 +291,13 @@ li {
 
     
 .previous {
-    left: 2rem;
+    left: 1rem;
 }
 
 .next {
-    right: 2rem;
+    right: 1rem;
 }
   }
+
+
+  
