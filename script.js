@@ -16,7 +16,7 @@ http.onload = function() {
             <li class="listing-container">
                 <div class="listing">                  
                  
-                    <div class="prop" style="background:url(./images/${item.image});
+                    <div class="prop-img" style="background:url(./images/${item.image});
                         background-size: cover;
                         border-radius: 20px;
                         background-repeat: no-repeat;
@@ -47,7 +47,8 @@ http.onload = function() {
                     </div>
                 
                 </div>
-                <p>Property Number ${item.index} of 34</>
+                <p><strong>Property Number ${item.index} of 34</strong></>
+                <div class="maps">${item.embedlink}</div>
         
             </li>
             
