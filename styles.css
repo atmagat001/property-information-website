@@ -16,7 +16,7 @@ img {
 main {
     width: 100vw;
     margin-top: 50px;
-    background-color: lightgray;
+    
 
 }
 
@@ -101,6 +101,7 @@ p {
     border-bottom: 1px dashed lightgray;
     width: 100%;
     align-items: center;
+    display: block;
 }
 
 .links-container {
@@ -191,7 +192,6 @@ li {
 @media only screen and (max-width: 800px) {
 
     main {
-        width: auto;
         height: 100vh;
     }
     header {
@@ -206,17 +206,14 @@ li {
     }
 
     .listing-container {
-        position: relative;
-        display: flex;
-        flex-flow: column;
-        margin: 0;
-        padding: 0;
+       
     }
     .listing {
         margin: 0;
         padding: 5px;
         display: flex;
         flex-flow: column;
+        width: 100vw;
     }
 
     .prop-img {
@@ -226,6 +223,7 @@ li {
 
     .details-container {
         width: auto;
+        height: 100%;
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -246,11 +244,10 @@ li {
        
     }
 
+  
+
     .property-number {
-        position: relative;
-        top: 30px;
-        height: auto;
-        width: 100%;
+       text-align: center;
     }
 
     iframe {

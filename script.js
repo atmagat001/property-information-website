@@ -48,7 +48,7 @@ http.onload = function() {
                 
                 </div>
 
-                <p class="property-number"><strong>Property Number ${item.index} of 34</strong></>
+                <div><p class="property-number"><strong>Property Number ${item.index} of 34</strong></></div>
                 <div class="maps">${item.embedlink}</div>
         
             </li>
