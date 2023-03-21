@@ -35,7 +35,7 @@ http.onload = function() {
                             <p class="details">Total Asset Value: Phpxxx</p>
 
                             <p class="details reco">Recommendation: Hold</p>
-                            <p class="details reco">Location Map:</p>
+                            
 
 
                             <div class="links-container">
@@ -47,7 +47,8 @@ http.onload = function() {
                     </div>
                 
                 </div>
-                <p><strong>Property Number ${item.index} of 34</strong></>
+
+                <p class="property-number"><strong>Property Number ${item.index} of 34</strong></>
                 <div class="maps">${item.embedlink}</div>
         
             </li>
