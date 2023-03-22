@@ -20,7 +20,8 @@ http.onload = function() {
                         background-size: cover;
                         border-radius: 20px;
                         background-repeat: no-repeat;
-                        background-color: lightblue;">
+                        background-color: lightblue;
+                        background-position: center;">
                     </div>
 
                     <div class="details-container">
@@ -69,8 +70,10 @@ http.onload = function() {
     let nextbutton = document.getElementsByClassName("next")[0];
     let previousbutton = document.getElementsByClassName("previous")[0];
 
-    nextbutton.addEventListener("click", slideNext)
-    previousbutton.addEventListener("click", slidePrevious)
+    nextbutton.addEventListener("click", slideNext);
+    
+    previousbutton.addEventListener("click", slidePrevious);
+
     function slideNext() {
         offset = 1
         slideMovement()
