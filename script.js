@@ -20,6 +20,7 @@ http.onload = function() {
                         background-size: cover;
                         border-radius: 20px;
                         background-repeat: no-repeat;
+                        background-position: center;
                         background-color: lightblue;">
                     </div>
 
