@@ -166,3 +166,26 @@ iframe {
     }
 
   }
+
+  table, th, td  {
+    border: dashed 1px gray;
+    font-size: 12px;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+
+  td {
+    text-align: right;
+    width: 75px;
+    padding: 5px;
+  }
+
+  th {
+    background-color: lightgray;
+  }
+
+  .lower-table {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  }

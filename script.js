@@ -7,6 +7,7 @@ http.send();
 http.onload = function() {
     if(this.readyState== 4 && this.status == 200) {
         let listings = JSON.parse(this.responseText);
+        
         let output = "";
         let links ="";
        
@@ -28,14 +29,9 @@ http.onload = function() {
 
                             <p class="details name">${item.name}</p>
                             <p class="details classification">Asset Classification: ${item.classification}</p>
-                            <p class="details">${item.address}</p>
+                            <p class="details">Address: ${item.address}</p>
                             
 
-                            <p class="details">Valuation per sqm: Phpxxx</p>
-                            <p class="details">Zonal Value per sqm: Phpxxx</p>
-                            <p class="details">Total Asset Value: Phpxxx</p>
-
-                            <p class="details reco">Recommendation: Hold</p>
                             
 
 
@@ -45,6 +41,65 @@ http.onload = function() {
                                 
                             </div>
                            
+                            <table>
+                            <tr>
+                                <th>Asset Type</th>
+                                <th>Area </th>
+                                <th>Slot</th>
+                                <th>Value per Sqm or Slot</th>
+                                <th>Total Value</th>
+                                
+                            </tr>
+                    
+                            <tr>
+                                <th>Lot</th>
+                                <td>${Number(item.lotArea).toLocaleString("en-US")}</td>
+                                <td></td>
+                                <td>${Number(item.lotPersqm).toLocaleString("en-US")}</td>
+                                <td>${Number(item.lotValue).toLocaleString("en-US")}</td>
+                    
+                            </tr>
+                    
+                            <tr>
+                                <th>Residential</th>
+                                <td>${Number(item.resiArea).toLocaleString("en-US")}</td>
+                                <td></td>
+                                <td>${Number(item.resiPersqm).toLocaleString("en-US")}</td>
+                                <td>${Number(item.resiValue).toLocaleString("en-US")}</td>
+                            </tr>
+                    
+                            <tr>
+                                <th>Office</th>
+                                <td>${Number(item.officeArea).toLocaleString("en-US")}</td>
+                                <td></td>
+                                <td>${Number(item.officePersqm).toLocaleString("en-US")}</td>
+                                <td>${Number(item.officeValue).toLocaleString("en-US")}</td>
+                            </tr>
+                    
+                            <tr>
+                                <th>Retail</th>
+                                <td>${Number(item.retailArea).toLocaleString("en-US")}</td>
+                                <td></td>
+                                <td>${Number(item.retailPersqm).toLocaleString("en-US")}</td>
+                                <td>${Number(item.retailValue).toLocaleString("en-US")}</td>
+                            </tr>
+                    
+                            <tr>
+                                <th>Parking</th>
+                                <td></td>
+                                <td>${Number(item.parkingSlot).toLocaleString("en-US")}</td>
+                                <td>${Number(item.parkingPerslot).toLocaleString("en-US")}</td>
+                                <td>${Number(item.parkingValue).toLocaleString("en-US")}</td>
+                            </tr>
+                    
+                            <tr class="lower-table">
+                                <td>Total Asset Value</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>${Number(item.totalValue).toLocaleString("en-US")}</td>
+                            </tr>
+                        </table>
                     </div>
                 
                 </div>
